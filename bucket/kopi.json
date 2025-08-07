@@ -1,5 +1,5 @@
 {
-    "version": "0.0.5",
+    "version": "0.0.6",
     "description": "Kopi is a JDK version management tool written in Rust that integrates with your shell to seamlessly switch between different Java Development Kit versions. ",
     "homepage": "https://kopi-vm.github.io/",
     "license": "Apache-2.0",
@@ -8,8 +8,8 @@
     },
     "architecture": {
         "64bit": {
-            "url": "https://github.com/kopi-vm/kopi/releases/download/v0.0.5/kopi-0.0.5-windows-x64.zip",
-            "hash": "785830e6430ff048f3ebe9ee610ba539777f12119cae4d91d2790bbcb9c3c73e"
+            "url": "https://github.com/kopi-vm/kopi/releases/download/v0.0.6/kopi-0.0.6-windows-x64.zip",
+            "hash": "374021603976701b5116031ba38cb65330aa07bf0f6b8c4cfd44684c494cde30"
         }
     },
     "extract_to": "bin",
