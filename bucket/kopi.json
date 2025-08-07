@@ -1,0 +1,28 @@
+{
+  "version": "0.0.5",
+  "homepage": "https://kopi-vm.github.io/",
+  "license": "Apache-2.0",
+  "suggest": {
+    "vcredist": "extras/vcredist2022"
+  },
+  "architecture": {
+    "64bit": {
+      "url": "https://github.com/kopi-vm/kopi/releases/download/v0.0.5/kopi-0.0.5-windows-x64.zip",
+      "hash": "785830E6430FF048F3EBE9EE610BA539777F12119CAE4D91D2790BBCB9C3C73E"
+    }
+  },
+  "extract_to": "bin",
+  "bin": [
+    [
+      "bin\\kopi.exe",
+      "kopi"
+    ]
+  ],
+  "env_add_path": [
+    "shims"
+  ],
+  "env_set": {
+    "KOPI_HOME": "$dir"
+  },
+  "post_install": "kopi setup"
+}
