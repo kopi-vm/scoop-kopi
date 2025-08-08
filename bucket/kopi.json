@@ -8,8 +8,12 @@
     },
     "architecture": {
         "64bit": {
-            "url": "https://github.com/kopi-vm/kopi/releases/download/v0.0.6/kopi-0.0.6-windows-x64.zip",
-            "hash": "374021603976701b5116031ba38cb65330aa07bf0f6b8c4cfd44684c494cde30"
+            "url": "https://github.com/kopi-vm/kopi/releases/download/v0.0.6/kopi-0.0.7-windows-x64.zip",
+            "hash": "c02d58b88f80a1efb04d17e457e921df872c118cf1d6bfbfe8bb3730d109ff9e"
+        },
+        "arm64": {
+            "url": "https://github.com/kopi-vm/kopi/releases/download/v0.0.6/kopi-0.0.7-windows-arm64.zip",
+            "hash": "feac53120a0e143a116fe1f39f2e8fdc9ff010fe52cacf46533968d0d68f551e"
         }
     },
     "extract_to": "bin",
@@ -31,6 +35,9 @@
         "architecture": {
             "64bit": {
                 "url": "https://github.com/kopi-vm/kopi/releases/download/v$version/kopi-$version-windows-x64.zip"
+            },
+            "arm64": {
+                "url": "https://github.com/kopi-vm/kopi/releases/download/v$version/kopi-$version-windows-arm64.zip"
             }
         },
         "hash": {
