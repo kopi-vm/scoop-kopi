@@ -5,7 +5,7 @@
 After manifests have been committed and pushed, run the following:
 
 ```pwsh
-scoop bucket add kopi https://github.com/kopi-vm/scoop-kopi
+scoop bucket add kopi-vm https://github.com/kopi-vm/scoop-kopi
 scoop install kopi-vm/kopi
 ```
 
