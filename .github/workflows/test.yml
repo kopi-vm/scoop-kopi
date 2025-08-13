@@ -1,0 +1,47 @@
+on:
+  workflow_dispatch:
+
+name: Install Test
+jobs:
+  
+
+  install:
+    name: Install Test
+
+    strategy:
+      matrix:
+        os: [ windows-2025, windows-11-arm ]
+        version: [ "24", "zulu@21", "liberica@17" ]
+    runs-on: ${{ matrix.os }}
+
+    steps:
+      - name: Setup Scoop
+        run: |
+          Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
+          Invoke-RestMethod -Uri https://get.scoop.sh | Invoke-Expression
+          
+          Add-Content -Path $env:GITHUB_PATH -Value "$HOME\scoop\shims"
+
+          scoop bucket add kopi-vm https://github.com/kopi-vm/scoop-kopi
+
+      - name: Install
+        run: scoop install kopi-vm/kopi
+
+      - name: Setup kopi
+        run: kopi setup
+      
+      - name: Install Java
+        run: kopi install ${{ matrix.version }}
+      
+      - name: Use Java
+        run: kopi global ${{ matrix.version }}
+      
+      - name: Run Java
+        run: |
+          $env:Path = "C:\Users\runneradmin\.kopi\shims" + ";" + $env:Path
+          ls -LiteralPath C:\Users\runneradmin\.kopi\jdks\
+          kopi env
+          kopi current
+          java --version
+
+
