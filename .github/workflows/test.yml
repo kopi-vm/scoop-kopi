@@ -11,7 +11,7 @@ jobs:
     strategy:
       matrix:
         os: [ windows-2025, windows-11-arm ]
-        version: [ "24", "zulu@21", "liberica@17" ]
+        version: [ "21", "zulu@21", "liberica@17" ]
     runs-on: ${{ matrix.os }}
 
     steps:
