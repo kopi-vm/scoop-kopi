@@ -3,7 +3,6 @@ on:
 
 name: Install Test
 jobs:
-  
 
   install:
     name: Install Test
@@ -43,5 +42,3 @@ jobs:
           kopi env
           kopi current
           java --version
-
-
